@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.profile {
+    position: absolute;
+    width: 180px;
+    height: 190px;
+    background: linear-gradient(135deg, #4e00ff, #8e2de2);
+    margin-left: 1080px;
+    border-radius: 50%;
+    /* transform: rotateX(100deg); */
+    /* z-index: 1; */
+  }
+  
+  .circle-react{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: center;
+    overflow: hidden;
+    margin: auto;
+    animation: circle 5s linear infinite;
+  }
+  
+  /* .circle-react img,
+  .circle-js img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  } */
+  
+  /* Animation for circular motion */
+  @keyframes circle {
+    0% {
+      transform: rotate(0deg) translate(150px) rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg) translate(150px) rotate(-360deg);
+    }
+  }
+  
+  @keyframes circle-in-hesitate {
+    0% {
+      clip-path: circle(0%);
+    }
+    40% {
+      clip-path: circle(40%);
+    }
+    100% {
+      clip-path: circle(125%);
+    }
+  }
+
+  .circle-hesitate {
+    animation: circle-in-hesitate 25s cubic-bezier(0.25, 1, 0.3, 1) both;
+
+  }
+  @keyframes circle-out-hesitate {
+    0% {
+      clip-path: circle(125%);
+    }
+    40% {
+      clip-path: circle(40%);
+    }
+    100% {
+      clip-path: circle(0%);
+    }
+  }
+
+  
+  @keyframes circle-in-hesitate {
+    0% {
+      clip-path: circle(0% at 50% 50%);
+      opacity: 0;
+    }
+    50% {
+      clip-path: circle(75% at 50% 50%);
+      opacity: 0.8;
+    }
+    100% {
+      clip-path: circle(100% at 50% 50%);
+      opacity: 1;
+    }
+  }
+  
+    
+  
