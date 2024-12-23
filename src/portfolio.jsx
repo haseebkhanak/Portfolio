@@ -10,6 +10,14 @@ import ex from './images/ex.JPG';
 import node from './images/node.PNG';
 import php from './images/php.PNG';
 import sql from './images/sql.PNG';
+import nextbtn from './images/nextbtn.PNG';
+import prevbtn from './images/prevbtn.PNG';
+import cal from './images/cal.JPG';
+import forecast from './images/forecast.JPG';
+import medi from './images/medi.JPG';
+import medirec from './images/medirec.JPG';
+import mindfinder from './images/mindfinder.JPG';
+import playersprediction from './images/playersprediction.JPG';
 import profile from './images/profile.PNG';
 import OrbitingCircles from './magicui.jsx/orbiting';
 import { TypingAnimation } from './magicui.jsx/typeanimate';
@@ -21,15 +29,40 @@ import { AnimatedList } from './magicui.jsx/animatelist';
 import { useRef,useEffect,useState } from 'react';
 
 export default function MainPage(className){
-  let [count,setCount]=useState(1)
-  const arr=[1,2,3,5]
-  const handler=()=>{
-    setCount(arr[count])
-    if(count>arr.length-1)
-    {
-      setCount(1)
-    }
+  const [count,setCount]=useState(0)
+  const images = [cal, forecast, medi, medirec, mindfinder, playersprediction];
+  const desc=['A user-friendly GPA Calculator built using HTML, CSS, and JavaScript, allowing students to easily calculate their Grade Point Average (GPA).',
+    'A web-based Weather Forecast application built using HTML, CSS, and JavaScript, utilizing a Weather API to provide accurate and up-to-date weather information.',
+    'Developed a webapp in which patients can connect with doctors for real-time consultations. This include chat, video call, voice call, appointment scheduling, searching profile and many more.',
+  'Developed a system that leverages machine learning classifiers to predict diseases based on symptoms and recommend appropriate medicines.',
+'A user-friendly Quiz Web App built using both frontend and backend technologies allowing users to test their knowledge and skills in various subjects.',
+'Trained a model that will predict the performance of cricket players based on various factors using regression techniques.The model is trained on historical data, learning the patterns and correlations between input features and the performance outcomes.']
+  
+    const tech=['I used frontend technologies i.e, HTML, CSS, JavaScript and Bootstrap and in backend I used MySQLi and PHP',
+      'I used frontend technologies i.e, HTML, CSS, JavaScript and Bootstrap and Weather API OpenWeatherMap',
+      'Web Socket is used for chat and WEBRTC is used for online streaming moreover MERN Stack has been impleted (React,NodeJs,ExpressJs,MongoDb,REST Apis)',
+      'MERN stack implemented for web app integrating both frontend and backend with database and for model python is used and flask is used on backend',
+      'For frontend HTML, CSS, JavaScript bootstrap and for backend Php and MySQLi have been implemented',
+      'Python is used for ML and Regressors are used to train a model']
+  const next=()=>{
+
+      if (count >= images.length-1) {
+        setCount(0);
+      } else {
+        setCount(count + 1);
+      }
+
   }
+
+  const previous=()=>{
+
+    if (images[count]===cal) {
+      setCount(5);
+    } else {
+      setCount(count - 1);
+    }
+
+}
   const bodyRef=useRef('')
   useEffect(()=>{
     bodyRef.current.style.backgroundColor="aliceblue"
@@ -160,9 +193,8 @@ export default function MainPage(className){
             <button>Book Appointment</button>
             </div>
         </nav>
-        <button onClick={handler}>cick</button>
         <div>
-          {count}
+          
         </div>
         <div className="profile mt-20">
   <div className="circle-react">
@@ -259,7 +291,20 @@ export default function MainPage(className){
                      <div>
                      <p className='mt-10 font-bold text-5xl text-transparent 
                      bg-gradient-to-r from-green-500 via-purple-500
-                     to-indigo-500 bg-clip-text' style={{marginLeft:"620px"}}><TypingAnimation>Projects</TypingAnimation></p>
+                     to-indigo-500 bg-clip-text' style={{marginLeft:"620px"}}><TypingAnimation>Projects</TypingAnimation></p> <br />
+
+                     <div className='flex bg-white shadow-xl ml-20 mt-20 relative rounded-lg' style={{width:"1000px",height:"auto",margin:"auto",borderRadius:"40px"}}>
+                      <img src={images[count]} alt="no" className='py-8' style={{height:"300px",paddingLeft:"10px"}}/>
+                      <p className='ml-10 py-8 pr-5'> <span className='text-2xl font-bold text-transparent 
+                     bg-gradient-to-r from-blue-500 via-purple-500
+                     to-indigo-500 bg-clip-text'>Overview</span> <br />{desc[count]} <br /><br /><span className='text-2xl font-bold text-transparent 
+                     bg-gradient-to-r from-blue-500 via-purple-500
+                     to-indigo-500 bg-clip-text'>Technologies</span> <br />{tech[count]}</p>
+                     </div> <br />
+                     <div className='flex'>
+                     <img src={prevbtn} onClick={previous} alt="" style={{width:"80px",height:"50px",marginLeft:"620px",cursor:"pointer"}}/>
+                     <img src={nextbtn} onClick={next} alt="" style={{width:"80px",height:"55px",cursor:"pointer",marginLeft:"50px"}}/>
+                     </div> <br /><br />
                      </div>
                      </div>
 
