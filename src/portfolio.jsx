@@ -184,13 +184,13 @@ export default function MainPage(className){
 <div ref={bodyRef} className="circle-hesitate">
 
 
-        <nav className="bg-white space-x-4 flex shadow-2xl">
-            <img src={Logo} alt="Error" style={{width:"50px",height:"50px",borderRadius:"50%"}} className='ml-10 mt-2 mb-2'/>
-            <div className='pl-80 space-x-20 mt-5'>
-            <button>About</button>
-            <button>Skills</button>
-            <button>Projects</button>
-            <button>Book Appointment</button>
+        <nav className="bg-white space-x-4 flex shadow-2xl navbar">
+            <img src={Logo} alt="Error"  className='logo ml-10 mt-2 mb-2'/>
+            <div className='pl-80 lg:space-x-20 lg:mt-5 sm:mt-2 items sm:space-x-10'>
+            <button className='aboutbtn'>About</button>
+            <button className='skillsbtn'>Skills</button>
+            <button className='projectsbtn'>Projects</button>
+            <button className='contactbtn'>Contact</button>
             </div>
         </nav>
         <div>
@@ -249,31 +249,31 @@ export default function MainPage(className){
     </div> */}
 
 
-<img src={profile} alt="Error" style={{position:"relative",marginLeft:"1020px",width:"300px",height:'300px', marginTop:"-30px"}}/>
+<img src={profile} alt="Error" className='personal'/>
 <div>
-<div className='bg-white shadow-xl ml-20 mt-20 relative rounded-lg' style={{width:"600px",borderRadius:"40px"}}>
+<div className='bg-white shadow-xl ml-20 mt-20 relative rounded-lg about'>
 <BorderBeam size={250} duration={5} />
-<p className='text-5xl font-bold ml-20 text-transparent 
+<p className='aboutmetext text-5xl font-bold ml-20 text-transparent 
                      bg-gradient-to-r from-green-500 via-purple-500
-                     to-indigo-500 bg-clip-text pt-5' style={{marginTop:"-300px"}}><TypingAnimation>About Me</TypingAnimation></p>
-<p className='text-2xl font-bold ml-20 text-transparent 
+                     to-indigo-500 bg-clip-text pt-5'>About Me</p>
+<p className='nametext text-2xl font-bold ml-20 text-transparent 
                      bg-gradient-to-r from-green-500 via-purple-500
-                     to-indigo-500 bg-clip-text'><TypingAnimation>Haseeb Salman Khan</TypingAnimation></p>
-<p className='text-transparent 
+                     to-indigo-500 bg-clip-text'>Haseeb Salman Khan</p>
+<p className='desctext text-transparent 
                      bg-gradient-to-r from-green-500 via-purple-500
                      to-indigo-500 bg-clip-text ml-20'>Software Engineer</p>
                      <div style={{width:"400px"}} className='ml-20 pb-5'>
                         
-                     <p>I am a passionate and skilled full-stack developer specializing in the MERN stack and machine learning. With expertise in building scalable web applications.</p>
+                     <p className='detailtext'>I am a passionate and skilled full-stack <br /> developer specializing in the MERN stack and  <br /> machine learning. With expertise in building <br /> scalable web applications.</p>
                      </div>
                      <a style={{borderRadius:"10px",marginLeft:"80px"}} className='bg-blue-300 border border-blue-500 px-2 py-2' href="/Resume.pdf" download="Resume.pdf">Download Resume</a> <br /><br />
                      </div>
                      </div>
 
                      <div>
-                     <p className='mt-10 font-bold text-5xl text-transparent 
+                     <p className='skills mt-10 font-bold text-5xl text-transparent 
                      bg-gradient-to-r from-green-500 via-purple-500
-                     to-indigo-500 bg-clip-text' style={{marginLeft:"630px"}}><TypingAnimation>Skills</TypingAnimation></p>
+                     to-indigo-500 bg-clip-text'>Skills</p>
                      <div
       className={classNames(
         "relative flex h-[400px] w-full flex-col p-6 overflow-hidden rounded-lg",
@@ -289,12 +289,12 @@ export default function MainPage(className){
                      </div> <br />
 
                      <div>
-                     <p className='mt-10 font-bold text-5xl text-transparent 
+                     <p className='projects mt-10 font-bold text-5xl text-transparent 
                      bg-gradient-to-r from-green-500 via-purple-500
-                     to-indigo-500 bg-clip-text' style={{marginLeft:"620px"}}><TypingAnimation>Projects</TypingAnimation></p> <br />
+                     to-indigo-500 bg-clip-text'>Projects</p> <br />
 
-                     <div className='flex bg-white shadow-xl ml-20 mt-20 relative rounded-lg' style={{width:"1000px",height:"auto",margin:"auto",borderRadius:"40px"}}>
-                      <img src={images[count]} alt="no" className='py-8' style={{height:"300px",paddingLeft:"10px"}}/>
+                     <div className='projectslides flex bg-white shadow-xl ml-20 mt-20 relative rounded-lg'>
+                      <img src={images[count]} alt="no" className='images py-8'/>
                       <p className='ml-10 py-8 pr-5'> <span className='text-2xl font-bold text-transparent 
                      bg-gradient-to-r from-blue-500 via-purple-500
                      to-indigo-500 bg-clip-text'>Overview</span> <br />{desc[count]} <br /><br /><span className='text-2xl font-bold text-transparent 

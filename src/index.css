@@ -86,6 +86,131 @@
       opacity: 1;
     }
   }
+
+  .logo{
+    width:50px;
+    height:50px;
+    border-radius:50%;
+  }
+  .about{
+    width: 600px;
+    border-radius: 40px;
+  }
+  .personal{
+    position: relative;
+    margin-left: 1020px;
+    width: 300px;
+    height: 300px;
+    margin-top: -30px;
+  }
+  .aboutmetext{
+    margin-top: -300px;
+  }
+  .skills{
+    margin-left: 630px;
+  }
+  .projects{
+    margin-left: 620px;
+  }
+  .projectslides{
+    width: 1000px;
+    height: auto;
+    margin: auto;
+    border-radius: 40%;
+  }
+  .images{
+    height:300px;
+    padding-left: 10px;
+  }
+  @media screen and (min-width: 300px ) and (max-width: 450px ) {
+   
+    .projectslides{
+      width: 500px;
+      height: auto;
+      margin: auto;
+      border-radius: 5%;
+      margin-left: 10px;
+    }
+    .images{
+      height:200px;
+      width: 200px;
+      padding-left: 0px;
+    }
+    .skills{
+      margin-top: 60px;
+      font-size: 30px;
+      margin-left: 150px;
+    }
+    .about{
+      margin-top: 400px;
+      width: 320px;
+      margin-left: 30px;
+      height: 300px;
+    }
+    .projects{
+      margin-top: 60px;
+      font-size: 30px;
+      margin-left: 150px;
+    }
+    .aboutmetext{
+      margin-top: -320px;
+      font-size: 30px;
+      margin-left: 10px;
+    }
+    .nametext{
+      font-size: 20px;
+      margin-left: 10px;
+    }
+    .desctext{
+      font-size: 15px;
+      margin-left: 10px;
+    }
+    .detailtext{
+      font-size: 15px;
+      margin-left: -70px;
+    }
+    .navbar {
+      margin-right:10px;
+      height: 70px;
+      max-width: 500px
+    }
+    .items{
+      display: flex;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    .skillsbtn{
+      padding-left: 20px;
+    }
+    .projectsbtn{
+      padding-left: 20px;
+    }
+    .contactbtn{
+      padding-left: 20px;
+    }
+    .logo{
+      margin-left: 5px;
+      width: 50px;
+      height:50px;
+      border-radius:50%;
+    }
+    .profile {
+      position: absolute;
+      width: 180px;
+      height: 170px;
+      background: linear-gradient(135deg, #4e00ff, #8e2de2);
+      margin-left: 80px;
+      border-radius: 50%;
+      margin-top: 100px;
+    }
+    .personal{
+      position: relative;
+      margin-left: 20px;
+      width: 300px;
+      height: 300px;
+      margin-top:-30px;
+    }
+  }
   
     
   
