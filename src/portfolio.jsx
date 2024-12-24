@@ -190,7 +190,8 @@ export default function MainPage(className){
             <button className='aboutbtn'>About</button>
             <button className='skillsbtn'>Skills</button>
             <button className='projectsbtn'>Projects</button>
-            <button className='contactbtn'>Contact</button>
+            <button className='skillsbtn'>Services</button>
+            <button className='contactbtn'>Book Appointment</button>
             </div>
         </nav>
         <div>
@@ -271,7 +272,7 @@ export default function MainPage(className){
                      </div>
 
                      <div>
-                     <p className='skills mt-10 font-bold text-5xl text-transparent 
+                     <p className='skills mt-20 font-bold text-5xl text-transparent 
                      bg-gradient-to-r from-green-500 via-purple-500
                      to-indigo-500 bg-clip-text'>Skills</p>
                      <div
@@ -293,18 +294,41 @@ export default function MainPage(className){
                      bg-gradient-to-r from-green-500 via-purple-500
                      to-indigo-500 bg-clip-text'>Projects</p> <br />
 
-                     <div className='projectslides flex bg-white shadow-xl ml-20 mt-20 relative rounded-lg'>
+                     <div className='projectslides flex bg-white shadow-xl ml-20 mt-30 relative rounded-lg'>
                       <img src={images[count]} alt="no" className='images py-8'/>
-                      <p className='ml-10 py-8 pr-5'> <span className='text-2xl font-bold text-transparent 
+                      <p className='overviewtext ml-10 py-8 pr-5'> <span className='text-2xl font-bold text-transparent 
                      bg-gradient-to-r from-blue-500 via-purple-500
                      to-indigo-500 bg-clip-text'>Overview</span> <br />{desc[count]} <br /><br /><span className='text-2xl font-bold text-transparent 
                      bg-gradient-to-r from-blue-500 via-purple-500
                      to-indigo-500 bg-clip-text'>Technologies</span> <br />{tech[count]}</p>
                      </div> <br />
                      <div className='flex'>
-                     <img src={prevbtn} onClick={previous} alt="" style={{width:"80px",height:"50px",marginLeft:"620px",cursor:"pointer"}}/>
-                     <img src={nextbtn} onClick={next} alt="" style={{width:"80px",height:"55px",cursor:"pointer",marginLeft:"50px"}}/>
+                     <img src={prevbtn} onClick={previous} alt="" className='prev'/>
+                     <img src={nextbtn} onClick={next} alt="" className='next'/>
                      </div> <br /><br />
+                     </div>
+
+                     <div>
+                     <p className='servicetext mt-8 font-bold text-5xl text-transparent 
+                     bg-gradient-to-r from-green-500 via-purple-500
+                     to-indigo-500 bg-clip-text'>Services</p> <br />
+                     <div className='text-center mt-30 grid grid-cols-3 gap-12'>
+                      <div className='frontend bg-white shadow-xl rounded-lg'>
+                        <p className='mt-10 text-2xl text-bold'>Frontend Development</p>
+                        <p className='mt-5 text-blue-700'>View More</p>
+                      </div>
+                      <div className='backend bg-white shadow-xl rounded-lg'>
+                        <p className='mt-10 text-2xl text-bold'>Backend Development</p>
+                        <p className='mt-5 text-blue-700'>View More</p>
+                      </div>
+                       <div className='fullstack bg-white shadow-xl rounded-lg'>
+                        <p className='mt-10 text-2xl text-bold'>Fullstack Development</p>
+                        <p className='mt-5 text-blue-700'>View More</p>
+                      </div>
+                       {/* <div className='ml bg-white shadow-xl rounded-lg'>
+                        <p className='mt-5 text-red-800 text-2xl text-bold'>Machine Learning</p>
+                      </div> */}
+                     </div> <br />
                      </div>
                      </div>
 
