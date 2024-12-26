@@ -29,6 +29,28 @@ import { AnimatedList } from './magicui.jsx/animatelist';
 import { useRef,useEffect,useState } from 'react';
 
 export default function MainPage(className){
+  const frontendRef=useRef('')
+  const backendendRef=useRef('')
+  const fullstackRef=useRef('')
+
+  const viewFrontend=()=>{
+    frontendRef.current.style.display="block"
+  }
+
+  const viewBackend=()=>{
+    backendendRef.current.style.display="block"
+  }
+
+  const viewFullstack=()=>{
+    fullstackRef.current.style.display="block"
+  }
+
+  const crossSvg=()=>{
+    frontendRef.current.style.display="none"
+    backendendRef.current.style.display="none"
+    fullstackRef.current.style.display="none"
+  }
+
   const [count,setCount]=useState(0)
   const images = [cal, forecast, medi, medirec, mindfinder, playersprediction];
   const desc=['A user-friendly GPA Calculator built using HTML, CSS, and JavaScript, allowing students to easily calculate their Grade Point Average (GPA).',
@@ -308,22 +330,65 @@ export default function MainPage(className){
                      </div> <br /><br />
                      </div>
 
+                     <div className='viewfrontend bg-white shadow-xl rounded-lg absolute' ref={frontendRef}>
+                        <p className='text-2xl ml-5 mt-5'>Frontend Development</p> <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5} className="cross size-6">
+  <path d="M6 18 18 6M6 6l12 12" style={{cursor:"pointer"}} onClick={crossSvg}/>
+</svg></span>
+                        <p className='ml-5 mt-5'>✔️ Building the user interface using HTML, CSS, and JavaScript.</p>
+                        <p className='ml-5'>✔️ Implementing frameworks like React, Bootstrap and Tailwind.</p>
+                        <p className='ml-5'>✔️ Transforming UI/UX design into functional and responsive applications.</p>
+                        <p className='ml-5'>✔️ Connecting the frontend with backend APIs for dynamic content.</p>
+                  
+                      </div>
+
+                      <div className='viewbackend bg-white shadow-xl rounded-lg absolute' ref={backendendRef}>
+                        <p className='text-2xl ml-5 mt-5'>Backend Development</p> <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5} className="cross size-6">
+  <path d="M6 18 18 6M6 6l12 12" style={{cursor:"pointer"}} onClick={crossSvg}/>
+</svg></span>
+                        <p className='ml-5 mt-5'>✔️ Building and managing server-side logic using languages like Node.js, PHP.</p>
+                        <p className='ml-5 mt-3'>✔️ Implementing frameworks like ExpressJs.</p>
+                        <p className='ml-5 mt-3'>✔️ Designing, implementing, and maintaining databases i.e, MySQL, MongoDB.</p>
+                        <p className='ml-5 mt-3'>✔️ Creating and integrating RESTful APIs.</p>
+                        <p className='ml-5 mt-3'>✔️ Connecting third-party services and APIs e.g., payment gateways.</p>
+                  
+                      </div>
+
+                      <div className='viewfullstack bg-white shadow-xl rounded-lg absolute' ref={fullstackRef}>
+                        <p className='text-2xl ml-5 mt-5'>Fullstack Development</p> <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5} className="cross size-6">
+  <path d="M6 18 18 6M6 6l12 12" style={{cursor:"pointer"}} onClick={crossSvg}/>
+</svg></span>
+                        <p className='ml-5 mt-5'>✔️ Designing responsive user interfaces and Developing server-side logic.</p>
+                        <p className='ml-5 mt-3'>✔️ Connecting frontend and backend through APIs.</p>
+                        <p className='ml-5 mt-3'>✔️ Building and deploying complete web applications from scratch.</p>
+                        <p className='ml-5 mt-3'>✔️ Connecting the frontend with backend APIs for dynamic content.</p>
+                  
+                      </div>
                      <div>
                      <p className='servicetext mt-8 font-bold text-5xl text-transparent 
                      bg-gradient-to-r from-green-500 via-purple-500
                      to-indigo-500 bg-clip-text'>Services</p> <br />
-                     <div className='text-center mt-30 grid grid-cols-3 gap-12'>
+                     <div className='mt-30 grid grid-cols-3 gap-12'>
                       <div className='frontend bg-white shadow-xl rounded-lg'>
-                        <p className='mt-10 text-2xl text-bold'>Frontend Development</p>
-                        <p className='mt-5 text-blue-700'>View More</p>
+                        <p className='ml-5 mt-10 text-2xl text-bold' style={{cursor:"pointer"}} onClick={viewFrontend}>Frontend Development</p>
+                        <p className='ml-5 mt-5 text-blue-700 font-bold' style={{cursor:"pointer"}} onClick={viewFrontend}>View More</p> <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="viewmore size-6">
+  <path strokeLinecap="round" strokeLinejoin="round" d="m5.25 4.5 7.5 7.5-7.5 7.5m6-15 7.5 7.5-7.5 7.5"/>
+</svg>
+</span>
                       </div>
                       <div className='backend bg-white shadow-xl rounded-lg'>
-                        <p className='mt-10 text-2xl text-bold'>Backend Development</p>
-                        <p className='mt-5 text-blue-700'>View More</p>
+                        <p className='ml-5 mt-10 text-2xl text-bold' style={{cursor:"pointer"}} onClick={viewBackend}>Backend Development</p>
+                        <p className='ml-5 mt-5 text-blue-700 font-bold' style={{cursor:"pointer"}} onClick={viewBackend}>View More</p><span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="viewmore size-6">
+  <path strokeLinecap="round" strokeLinejoin="round" d="m5.25 4.5 7.5 7.5-7.5 7.5m6-15 7.5 7.5-7.5 7.5"/>
+</svg></span>
                       </div>
+
+                
+
                        <div className='fullstack bg-white shadow-xl rounded-lg'>
-                        <p className='mt-10 text-2xl text-bold'>Fullstack Development</p>
-                        <p className='mt-5 text-blue-700'>View More</p>
+                        <p className='ml-5 mt-10 text-2xl text-bold' style={{cursor:"pointer"}} onClick={viewFullstack}>Fullstack Development</p>
+                        <p className='ml-5 mt-5 text-blue-700 font-bold' style={{cursor:"pointer"}} onClick={viewFullstack}>View More</p><span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="viewmore size-6">
+  <path strokeLinecap="round" strokeLinejoin="round" d="m5.25 4.5 7.5 7.5-7.5 7.5m6-15 7.5 7.5-7.5 7.5"/>
+</svg></span>
                       </div>
                        {/* <div className='ml bg-white shadow-xl rounded-lg'>
                         <p className='mt-5 text-red-800 text-2xl text-bold'>Machine Learning</p>
