@@ -155,12 +155,22 @@
     color: blue;
     cursor: pointer;
   }
+  .blur{
+    width: 100%;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    background-color: rgba(230, 227, 227, 0.5);
+    z-index: 1;
+    display: none;
+  }
+
   .viewfrontend{
     margin-left: 510px;
     width: 400px;
     height: 320px;
     margin-top: -140px;
-    z-index: 1;
+    z-index: 10;
     border-radius: 30px;
     display: none;
   }
@@ -169,7 +179,7 @@
     width: 400px;
     height: 320px;
     margin-top: -140px;
-    z-index: 1;
+    z-index: 10;
     border-radius: 30px;
     display: none;
   }
@@ -178,23 +188,54 @@
     width: 400px;
     height: 320px;
     margin-top: -140px;
-    z-index: 1;
+    z-index: 10;
     border-radius: 30px;
     display: none;
   }
   .cross{
     margin-left: 370px;
     margin-top: -30px;
-  }
-  .services{
-    display: block;
+    z-index: 2;
   }
   .downloadbtn{
     margin-left: 80px;
     border-radius: 10px;
   }
+
+.nametext {
+  width: fit-content;
+  margin-left: 75px;
+  margin-top: 25px;
+  font-weight: bold;
+  font-family: monospace;
+  font-size: 20px;
+  background: linear-gradient(135deg,#0000 calc(50% - 0.5em),#000 0 calc(50% + 0.5em),#0000 0) right/300% 100%;
+  animation: l22 2s infinite;
+}
+.nametext::before {
+  content: "Haseeb Salman Khan";
+  color: rgb(114, 245, 114);
+  padding: 0 5px;
+  background: inherit;
+  background-image: linear-gradient(135deg,#000 calc(50% - 0.5em),#fff 0 calc(50% + 0.5em),#000 0);
+  -webkit-background-clip:text;
+          background-clip:text;
+}
+
+.footer{
+  background-color: #000;
+  height: 400px;
+}
+
+@keyframes l22{
+  100%{background-position: left}
+}
+
   @media screen and (min-width: 300px ) and (max-width: 450px ) {
 
+    .services{
+      display: block;
+    }
    .frontend{
     margin-left: 90px;
    }
@@ -306,8 +347,8 @@
       margin-left: 10px;
     }
     .nametext{
-      font-size: 20px;
-      margin-left: 10px;
+      font-size: 18px;
+      margin-left: 5px;
     }
     .desctext{
       font-size: 15px;
