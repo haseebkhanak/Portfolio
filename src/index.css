@@ -186,8 +186,79 @@
     margin-left: 370px;
     margin-top: -30px;
   }
+  .services{
+    display: block;
+  }
+  .downloadbtn{
+    margin-left: 80px;
+    border-radius: 10px;
+  }
   @media screen and (min-width: 300px ) and (max-width: 450px ) {
-   
+
+   .frontend{
+    margin-left: 90px;
+   }
+   .backend{
+    margin-left: 90px;
+   }
+   .fullstack{
+    margin-left: 90px;
+   }
+   .frontendtext{
+    padding-top: 20px;
+   }
+   .backendtext{
+    padding-top: 20px;
+   }
+   .fullstacktext{
+    padding-top: 20px;
+   }
+   .viewfrontend{
+    margin-left: 35px;
+    width: 300px;
+    margin-top: 200px;
+    z-index: 1;
+    border-radius: 30px;
+    display: none;
+  }
+  .viewbackend{
+    margin-left: 30px;
+    width: 320px;
+    height: 400px;
+    margin-top: 200px;
+    z-index: 1;
+    border-radius: 30px;
+    display: none;
+  }
+  .viewfullstack{
+    margin-left: 35px;
+    width: 300px;
+    height: 350px;
+    margin-top: 200px;
+    z-index: 1;
+    border-radius: 30px;
+    display: none;
+  }
+  .cross{
+    margin-left: 270px;
+    margin-top: -30px;
+  }
+  .viewfrontendtext{
+    font-size: 20px;
+  }
+  .viewbackendtext{
+    font-size: 20px;
+  }
+  .viewfullstacktext{
+    font-size: 20px;
+  }
+   .services{
+    margin-top: -20px;
+  }
+    .servicetext{
+      margin-left: 130px;
+      font-size: 30px;
+    }
     .projectslides{
       width: 350px;
       display: block;
@@ -214,6 +285,11 @@
       width: 320px;
       margin-left: 30px;
       height: 300px;
+    }
+    .downloadbtn{
+      margin-left: 12px;
+      border-radius: 10px;
+
     }
     .projects{
       margin-top: 30px;

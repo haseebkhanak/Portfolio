@@ -289,7 +289,7 @@ export default function MainPage(className){
                         
                      <p className='detailtext'>I am a passionate and skilled full-stack <br /> developer specializing in the MERN stack and  <br /> machine learning. With expertise in building <br /> scalable web applications.</p>
                      </div>
-                     <a style={{borderRadius:"10px",marginLeft:"80px"}} className='bg-blue-300 border border-blue-500 px-2 py-2' href="/Resume.pdf" download="Resume.pdf">Download Resume</a> <br /><br />
+                     <a className='downloadbtn bg-blue-300 border border-blue-500 px-2 py-2' href="/Resume.pdf" download="Resume.pdf">Download Resume</a> <br /><br />
                      </div>
                      </div>
 
@@ -331,7 +331,7 @@ export default function MainPage(className){
                      </div>
 
                      <div className='viewfrontend bg-white shadow-xl rounded-lg absolute' ref={frontendRef}>
-                        <p className='text-2xl ml-5 mt-5'>Frontend Development</p> <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5} className="cross size-6">
+                        <p className='viewfrontendtext text-2xl ml-5 mt-5'>Frontend Development</p> <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5} className="cross size-6">
   <path d="M6 18 18 6M6 6l12 12" style={{cursor:"pointer"}} onClick={crossSvg}/>
 </svg></span>
                         <p className='ml-5 mt-5'>✔️ Building the user interface using HTML, CSS, and JavaScript.</p>
@@ -342,7 +342,7 @@ export default function MainPage(className){
                       </div>
 
                       <div className='viewbackend bg-white shadow-xl rounded-lg absolute' ref={backendendRef}>
-                        <p className='text-2xl ml-5 mt-5'>Backend Development</p> <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5} className="cross size-6">
+                        <p className='viewbackendtext text-2xl ml-5 mt-5'>Backend Development</p> <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5} className="cross size-6">
   <path d="M6 18 18 6M6 6l12 12" style={{cursor:"pointer"}} onClick={crossSvg}/>
 </svg></span>
                         <p className='ml-5 mt-5'>✔️ Building and managing server-side logic using languages like Node.js, PHP.</p>
@@ -354,7 +354,7 @@ export default function MainPage(className){
                       </div>
 
                       <div className='viewfullstack bg-white shadow-xl rounded-lg absolute' ref={fullstackRef}>
-                        <p className='text-2xl ml-5 mt-5'>Fullstack Development</p> <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5} className="cross size-6">
+                        <p className='viewfullstacktext text-2xl ml-5 mt-5'>Fullstack Development</p> <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5} className="cross size-6">
   <path d="M6 18 18 6M6 6l12 12" style={{cursor:"pointer"}} onClick={crossSvg}/>
 </svg></span>
                         <p className='ml-5 mt-5'>✔️ Designing responsive user interfaces and Developing server-side logic.</p>
@@ -367,16 +367,16 @@ export default function MainPage(className){
                      <p className='servicetext mt-8 font-bold text-5xl text-transparent 
                      bg-gradient-to-r from-green-500 via-purple-500
                      to-indigo-500 bg-clip-text'>Services</p> <br />
-                     <div className='mt-30 grid grid-cols-3 gap-12'>
+                     <div className='services grid grid-cols-3 gap-12'>
                       <div className='frontend bg-white shadow-xl rounded-lg'>
-                        <p className='ml-5 mt-10 text-2xl text-bold' style={{cursor:"pointer"}} onClick={viewFrontend}>Frontend Development</p>
+                        <p className='frontendtext ml-5 mt-10 text-2xl text-bold' style={{cursor:"pointer"}} onClick={viewFrontend}>Frontend Development</p>
                         <p className='ml-5 mt-5 text-blue-700 font-bold' style={{cursor:"pointer"}} onClick={viewFrontend}>View More</p> <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="viewmore size-6">
   <path strokeLinecap="round" strokeLinejoin="round" d="m5.25 4.5 7.5 7.5-7.5 7.5m6-15 7.5 7.5-7.5 7.5"/>
 </svg>
 </span>
                       </div>
                       <div className='backend bg-white shadow-xl rounded-lg'>
-                        <p className='ml-5 mt-10 text-2xl text-bold' style={{cursor:"pointer"}} onClick={viewBackend}>Backend Development</p>
+                        <p className='backendtext ml-5 mt-10 text-2xl text-bold' style={{cursor:"pointer"}} onClick={viewBackend}>Backend Development</p>
                         <p className='ml-5 mt-5 text-blue-700 font-bold' style={{cursor:"pointer"}} onClick={viewBackend}>View More</p><span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="viewmore size-6">
   <path strokeLinecap="round" strokeLinejoin="round" d="m5.25 4.5 7.5 7.5-7.5 7.5m6-15 7.5 7.5-7.5 7.5"/>
 </svg></span>
@@ -385,7 +385,7 @@ export default function MainPage(className){
                 
 
                        <div className='fullstack bg-white shadow-xl rounded-lg'>
-                        <p className='ml-5 mt-10 text-2xl text-bold' style={{cursor:"pointer"}} onClick={viewFullstack}>Fullstack Development</p>
+                        <p className='fullstacktext ml-5 mt-10 text-2xl text-bold' style={{cursor:"pointer"}} onClick={viewFullstack}>Fullstack Development</p>
                         <p className='ml-5 mt-5 text-blue-700 font-bold' style={{cursor:"pointer"}} onClick={viewFullstack}>View More</p><span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="viewmore size-6">
   <path strokeLinecap="round" strokeLinejoin="round" d="m5.25 4.5 7.5 7.5-7.5 7.5m6-15 7.5 7.5-7.5 7.5"/>
 </svg></span>
