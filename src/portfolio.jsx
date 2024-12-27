@@ -19,6 +19,10 @@ import medirec from './images/medirec.JPG';
 import mindfinder from './images/mindfinder.JPG';
 import playersprediction from './images/playersprediction.JPG';
 import profile from './images/profile.PNG';
+import fb from './images/fb.PNG';
+import git from './images/git.PNG';
+import ln from './images/ln.PNG';
+import wa from './images/wa.PNG';
 import OrbitingCircles from './magicui.jsx/orbiting';
 import { TypingAnimation } from './magicui.jsx/typeanimate';
 import { BorderBeam } from './magicui.jsx/borderbeam';
@@ -153,7 +157,19 @@ export default function MainPage(className) {
     );
   };
 
-
+  const email=()=>{
+    window.location.assign("mailto:saadkhanak13@gmail.com")
+  }
+  const linkdin=()=>{
+    window.location.assign("https://www.linkedin.com/in/haseeb-khan-32934b261")
+  }
+  const whatsapp=()=>{
+    window.location.assign("https://wa.me/923119579131")
+  }
+  const github=()=>{
+    window.location.assign("https://github.com/haseebkhanak/haseebkhanak.git")
+  }
+  
   // const Icons = {
   //     // gitHub: () => (
   //     //   <svg width="50" height="50" viewBox="0 0 438.549 438.549">
@@ -208,20 +224,20 @@ export default function MainPage(className) {
   return (
 
     <>
-      <div className="blur" ref={blurRef}>
+      {/* <div className="blur" ref={blurRef}>
 
-      </div>
+      </div> */}
 
       <div ref={bodyRef} className="circle-hesitate">
 
         <nav className="bg-white space-x-4 flex shadow-2xl navbar">
           <img src={Logo} alt="Error" className='logo ml-10 mt-2 mb-2' />
           <div className='pl-80 lg:space-x-20 lg:mt-5 sm:mt-2 items sm:space-x-10'>
-            <button className='aboutbtn'>About</button>
-            <button className='skillsbtn'>Skills</button>
-            <button className='projectsbtn'>Projects</button>
-            <button className='skillsbtn'>Services</button>
-            <button className='contactbtn'>Book Appointment</button>
+            <a href='#about' className='aboutbtn'>About</a >
+            <a href='#skills' className='skillsbtn'>Skills</a>
+            <a href='#projects' className='projectsbtn'>Projects</a>
+            <a href='#services' className='skillsbtn'>Services</a>
+            <a href='#contact' className='contactbtn'>Contact Me</a>
           </div>
         </nav>
         <div>
@@ -282,7 +298,7 @@ export default function MainPage(className) {
 
         <img src={profile} alt="Error" className='personal' />
         <div>
-          <div className='bg-white shadow-xl ml-20 mt-20 relative rounded-lg about'>
+          <div className='bg-white shadow-xl ml-20 mt-20 relative rounded-lg about' id='about'>
             <BorderBeam size={250} duration={5} />
             <p className='aboutmetext text-5xl font-bold ml-20 text-transparent 
                      bg-gradient-to-r from-green-500 via-purple-500
@@ -295,11 +311,21 @@ export default function MainPage(className) {
 
               <p className='detailtext'>I am a passionate and skilled full-stack <br /> developer specializing in the MERN stack and  <br /> machine learning. With expertise in building <br /> scalable web applications.</p>
             </div>
-            <a className='downloadbtn bg-blue-300 border border-blue-500 px-2 py-2' href="/Resume.pdf" download="Resume.pdf">Download Resume</a> <br /><br />
+            <a href="/Resume.pdf" download="Resume.pdf" className='downloadbtn px-2 py-2 group relative inline-block overflow-hidden bg-blue-300 border border-blue-500 focus:outline-none focus:ring'>  <span
+    className="absolute inset-y-0 left-0 w-[2px] bg-blue-700 border border-blue-800 transition-all group-hover:w-full"
+  ></span>
+
+  <span
+    className="relative text-black transition-colors group-hover:text-white"
+  >
+    Download Resume
+  </span>
+</a> <br />
+            {/* <a className='downloadbtn bg-blue-300 border border-blue-500 px-2 py-2 hover hover:bg-blue-800 hover:text-white hover:border-blue-900' href="/Resume.pdf" download="Resume.pdf">Download Resume</a> <br /><br /> */}
           </div>
         </div>
 
-        <div>
+        <div id='skills'>
           <p className='skills mt-20 font-bold text-5xl text-transparent 
                      bg-gradient-to-r from-green-500 via-purple-500
                      to-indigo-500 bg-clip-text'>Skills</p>
@@ -317,7 +343,7 @@ export default function MainPage(className) {
           </div>
         </div> <br />
 
-        <div>
+        <div id='projects'>
           <p className='projects mt-10 font-bold text-5xl text-transparent 
                      bg-gradient-to-r from-green-500 via-purple-500
                      to-indigo-500 bg-clip-text'>Projects</p> <br />
@@ -369,7 +395,7 @@ export default function MainPage(className) {
           <p className='ml-5 mt-3'>✔️ Connecting the frontend with backend APIs for dynamic content.</p>
 
         </div>
-        <div>
+        <div id='services'>
           <p className='servicetext mt-8 font-bold text-5xl text-transparent 
                      bg-gradient-to-r from-green-500 via-purple-500
                      to-indigo-500 bg-clip-text'>Services</p> <br />
@@ -402,11 +428,73 @@ export default function MainPage(className) {
           </div> <br />
         </div> <br /><br />
         
-        <div className="footer">
-          <p className='text-center text-5xl text-white pt-5'>Haseeb Salman Khan</p>
-          <p className='text-white text-center mt-2'>I am a passionate and skilled full-stack <br /> developer specializing in the MERN stack and  <br /> machine learning. With expertise in building <br /> scalable web applications.</p>
-          <svg class="h-8 w-8 text-white"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" /></svg>
+        <div className="footer" id='contact'>
+          <p className='text-center text-5xl pt-5 footername'>Haseeb Salman Khan</p>
+          <p className='text-center mt-2 footerdetail'>I am a passionate and skilled full-stack <br /> developer specializing in the MERN stack and  <br /> machine learning. With expertise in building <br /> scalable web applications.</p> <br /><br />
+          <div className='flex icons'>
+          <img src={fb} alt="No" className='fb' onClick={email} style={{cursor:"pointer"}}/>
+          <img src={ln} alt="No" className='ln' onClick={linkdin} style={{cursor:"pointer"}}/>
+          <img src={wa} alt="No" className='wa' onClick={whatsapp} style={{cursor:"pointer"}}/>
+          <img src={git} alt="No" className='git' onClick={github} style={{cursor:"pointer"}}/>
+          </div> <br /><br />
+
+          <div className="flex footerBtn">
+          {/* <img src={Logo} alt="Error" className='logo ml-10 mt-2 mb-2' /> */}
+          <div>
+            
+            <a href='#about' className='aboutfooter px-2 group relative inline-block overflow-hidden border border-black focus:outline-none focus:ring'>  <span
+    className="absolute inset-y-0 left-0 w-[2px] bg-black transition-all group-hover:w-full group-active:bg-black"
+  ></span>
+
+  <span
+    className="relative text-black transition-colors group-hover:text-white"
+  >
+    About
+  </span>
+</a>
+<a href='#skills' className='skillsfooter px-2 group relative inline-block overflow-hidden border border-black focus:outline-none focus:ring'>  <span
+    className="absolute inset-y-0 left-0 w-[2px] bg-black transition-all group-hover:w-full group-active:bg-black"
+  ></span>
+
+  <span
+    className="relative text-black transition-colors group-hover:text-white"
+  >
+    Skills
+  </span>
+</a>
+<a href='#projects' className='projectsfooter px-2 group relative inline-block overflow-hidden border border-black focus:outline-none focus:ring'>  <span
+    className="absolute inset-y-0 left-0 w-[2px] bg-black transition-all group-hover:w-full group-active:bg-black"
+  ></span>
+
+  <span
+    className="relative text-black transition-colors group-hover:text-white"
+  >
+    Projects
+  </span>
+</a>
+<a href='#services' className='servicesfooter px-2 group relative inline-block overflow-hidden border border-black focus:outline-none focus:ring'>  <span
+    className="absolute inset-y-0 left-0 w-[2px] bg-black transition-all group-hover:w-full group-active:bg-black"
+  ></span>
+
+  <span
+    className="relative text-black transition-colors group-hover:text-white"
+  >
+    Services
+  </span>
+</a>
+<a href='#contact' className='contactfooter px-2 group relative inline-block overflow-hidden border border-black focus:outline-none focus:ring'>  <span
+    className="absolute inset-y-0 left-0 w-[2px] bg-black transition-all group-hover:w-full group-active:bg-black"
+  ></span>
+
+  <span
+    className="relative text-black transition-colors group-hover:text-white"
+  >
+    Contact Me
+  </span>
+</a>
+          </div>
         </div>
+</div>
 </div>
 
 
