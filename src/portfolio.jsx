@@ -31,7 +31,6 @@ import { NeonGradientCard } from './magicui.jsx/neon';
 import classNames from 'classnames';
 import { AnimatedList } from './magicui.jsx/animatelist';
 import { useRef, useEffect, useState } from 'react';
-
 export default function MainPage(className) {
   const frontendRef = useRef('')
   const backendendRef = useRef('')
