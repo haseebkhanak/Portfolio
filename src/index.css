@@ -105,6 +105,7 @@
   }
   .aboutmetext{
     margin-top: -300px;
+    margin-left: 220px;
   }
   .skills{
     margin-left: 630px;
@@ -160,22 +161,16 @@
     margin: 0;
     padding: 0;
   }
-  /* .blur{
-    width: 100%;
-    height: 100%;
-    left: 0;
-    position: fixed;
-    background-color: rgba(230, 227, 227, 0.5);
-    z-index: 1;
+  .blur{
     display: none;
-  } */
+    /* z-index: 5; */
+  }
 
   .viewfrontend{
     margin-left: 510px;
     width: 400px;
     height: 320px;
     margin-top: -140px;
-    z-index: 10;
     border-radius: 30px;
     display: none;
   }
@@ -184,7 +179,6 @@
     width: 400px;
     height: 320px;
     margin-top: -140px;
-    z-index: 10;
     border-radius: 30px;
     display: none;
   }
@@ -193,14 +187,15 @@
     width: 400px;
     height: 320px;
     margin-top: -140px;
-    z-index: 10;
     border-radius: 30px;
     display: none;
   }
   .cross{
-    margin-left: 370px;
-    margin-top: -30px;
+    margin-left: 350px;
+    margin-top: -40px;
+    width: 30px;
     z-index: 2;
+    cursor: pointer;
   }
   .downloadbtn{
     margin-left: 80px;
@@ -259,7 +254,7 @@
 .aboutfooter{
   border: 2px solid black;
   border-radius: 8px;
-  margin-left: 440px;
+  margin-left: 500px;
 }
 
 .skillsfooter{
@@ -286,12 +281,24 @@
   margin-left: 25px;
 }
 
+.repo{
+  margin-left: 400px;
+  border-radius: 10px;
+  font-size: 20px;
+}
+
 
 @keyframes l22{
   100%{background-position: left}
 }
 
-  @media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {
+  
+    .repo{
+      margin-left: 35px;
+      border-radius: 10px;
+      font-size: 20px;
+    }
 
     .footername{
       margin-left: 0px;
@@ -309,7 +316,7 @@
     }
 
     .aboutfooter{
-      margin-left: 12px;
+      margin-left: 60px;
     }
     
     .skillsfooter{
@@ -375,8 +382,7 @@
    .viewfrontend{
     margin-left: 35px;
     width: 300px;
-    margin-top: 200px;
-    z-index: 1;
+    margin-top: 120px;
     border-radius: 30px;
     display: none;
   }
@@ -385,7 +391,6 @@
     width: 320px;
     height: 400px;
     margin-top: 200px;
-    z-index: 1;
     border-radius: 30px;
     display: none;
   }
@@ -393,14 +398,15 @@
     margin-left: 35px;
     width: 300px;
     height: 350px;
-    margin-top: 200px;
-    z-index: 1;
+    margin-top: 450px;
     border-radius: 30px;
     display: none;
   }
   .cross{
-    margin-left: 270px;
-    margin-top: -30px;
+    margin-left: 260px;
+    margin-top: -40px;
+    width: 30px;
+    /* height: 35px; */
   }
   .viewfrontendtext{
     font-size: 20px;
@@ -419,19 +425,22 @@
       font-size: 30px;
     }
     .projectslides{
-      width: 350px;
-      display: block;
+      width: 320px;
+      /* display: block; */
       height: auto;
       margin: auto;
       border-radius: 5%;
-      margin-left: 10px;
+      margin-left: 20px;
       margin-top: -10px;
+    }
+    .slides{
+      display: block;
     }
     .images{
       height:300px;
-      width: 300px;
+      width: 280px;
       padding-left: 0px;
-      margin-left: 30px;
+      margin-left: 25px;
       /* margin-top: 100px; */
     }
     .skills{
@@ -440,10 +449,10 @@
       margin-left: 150px;
     }
     .about{
-      margin-top: 400px;
+      /* margin-top: 400px; */
       width: 320px;
-      margin-left: 30px;
-      height: 300px;
+      margin-left: 24px;
+      height: 250px;
     }
     .downloadbtn{
       margin-left: 12px;
@@ -460,9 +469,9 @@
       margin-top: -40px;
     }
     .aboutmetext{
-      margin-top: -320px;
+      margin-top: 10px;
       font-size: 30px;
-      margin-left: 10px;
+      margin-left: 100px;
     }
     .nametext{
       font-size: 18px;
@@ -481,13 +490,8 @@
       height: 70px;
       font-size: 12px;
       padding-top: 25px;
+      width: 100%;
       /* width: 400px; */
-      flex-direction: row;
-    }
-    body{
-      margin: 0;
-      padding: 0;
-      overflow-x: hidden;
     }
     .items{
       display: flex;
