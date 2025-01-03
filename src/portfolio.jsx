@@ -189,7 +189,29 @@ export default function MainPage(className) {
 
     <>
 
-      <div ref={bodyRef} className="circle-hesitate overflow-hidden">
+<body>
+    <div class="wrapper">
+      
+      {/* <h1>Bubbles Animation</h1> */}
+      <div><span class="dot"></span></div>
+      <div><span class="dot"></span></div>
+      <div><span class="dot"></span></div>
+      <div><span class="dot"></span></div>
+      <div><span class="dot"></span></div>
+      <div><span class="dot"></span></div>
+      <div><span class="dot"></span></div>
+      <div><span class="dot"></span></div>
+      <div><span class="dot"></span></div>
+      <div><span class="dot"></span></div>
+      <div><span class="dot"></span></div>
+      <div><span class="dot"></span></div>
+      <div><span class="dot"></span></div>
+      <div><span class="dot"></span></div>
+      <div><span class="dot"></span></div>
+
+      
+    </div>
+    <div ref={bodyRef} className="circle-hesitate overflow-hidden">
 
         <nav className="bg-white space-x-4 flex shadow-2xl navbar overflow-hidden">
           <img src={Logo} alt="Error" className='logo ml-10 mt-2 mb-2' />
@@ -216,7 +238,7 @@ export default function MainPage(className) {
                      bg-gradient-to-r from-green-500 via-purple-500
                      to-indigo-500 bg-clip-text pt-20'>About Me</p>
           <div className='bg-white shadow-xl ml-20 relative rounded-lg about' id='about'>
-            {/* <BorderBeam size={250} duration={5} /> */}
+            <BorderBeam size={250} duration={5} />
             <p className='nametext pt-5'></p>
             <p className='desctext text-transparent 
                      bg-gradient-to-r from-green-500 via-purple-500
@@ -400,6 +422,8 @@ export default function MainPage(className) {
         </div>
 </div>
 </div>
+  </body>
+      
 
 
     </>
